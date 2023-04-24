@@ -1,3 +1,66 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://masaiqi.com/'
+languageCode = 'zh_CN'
+title = '马赛琦的小站'
+theme = 'gokarna'
+
+enableRobotsTXT = true
+
+pygmentsStyle = "monokai"
+
+[menu]
+
+[[menu.main]]
+name = "Home"
+pre = "<span data-feather='home'></span>"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "posts"
+pre = "<span data-feather='book'></span>"
+url = "/posts/"
+name = "Posts"
+weight = 2
+
+[[menu.main]]
+identifier = "tags"
+pre = "<span data-feather='tag'></span>"
+name = "Tags"
+url = "/tags/"
+weight = 3
+
+[[menu.main]]
+name = "Projects"
+pre = "<span data-feather='code'></span>"
+url = "/projects/"
+weight = 4
+
+[[menu.main]]
+identifier = "github"
+url = "https://github.com/Raremaa"
+weight = 98
+pre = "<span data-feather='github'></span>"
+
+[[menu.main]]
+identifier = "rss"
+pre = "<span data-feather='rss'></span>"
+url = "/index.xml"
+weight = 99
+
+[markup]
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 3
+ordered = false
+
+[params]
+avatarURL = "img/logo.png"
+avatarSize = "size-m"
+owner = "马赛琦"
+metaKeywords = ["masaiqi", "Kaarlo", "马赛琦", "blog", "Java", "Engineer"]
+description = "认识你自己 凡事勿过度"
+footer = "Kaarlo"
+socialIcons = [
+    { name = "github", url = "https://github.com/Raremaa" },
+    { name = "email", url = "mailto:masaiqi.com@gmail.com" }
+]
