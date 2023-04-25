@@ -7,10 +7,13 @@ enableRobotsTXT = true
 
 pygmentsStyle = "monokai"
 
+disablePathToLower = true
+
 [menu]
 
 [[menu.main]]
 name = "Home"
+identifier = "home"
 pre = "<span data-feather='home'></span>"
 url = "/"
 weight = 1
@@ -23,17 +26,25 @@ name = "Posts"
 weight = 2
 
 [[menu.main]]
+name = "Archives"
+identifier = "archives"
+pre = "<span data-feather='archive'></span>"
+url = "/archives/"
+weight = 3
+
+[[menu.main]]
 identifier = "tags"
 pre = "<span data-feather='tag'></span>"
 name = "Tags"
 url = "/tags/"
-weight = 3
+weight = 4
 
 [[menu.main]]
-name = "Projects"
-pre = "<span data-feather='code'></span>"
-url = "/projects/"
-weight = 4
+name = "About"
+identifier = "about"
+url = "/posts/嘿你好/"
+weight = 5
+pre = "<span data-feather='user'></span>"
 
 [[menu.main]]
 identifier = "github"
@@ -50,7 +61,7 @@ weight = 99
 [markup]
 [markup.tableOfContents]
 startLevel = 1
-endLevel = 3
+endLevel = 4
 ordered = false
 
 [params]
