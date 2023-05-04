@@ -32,7 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.108.0
-      BEIAN_INFO: ${{ secrets.BEIAN_INFO }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -50,7 +49,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Before Building
-        run: sed -i 's/beian/v${BEIAN_INFO}/g' config.toml
+        run: sed -i 's/beian/Kaarlo/g' config.toml
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
