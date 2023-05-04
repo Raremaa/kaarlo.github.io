@@ -30,6 +30,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: AliyunOSS
+      url: https://masaiqi.com
     env:
       HUGO_VERSION: 0.108.0
     steps:
@@ -59,21 +62,13 @@ jobs:
           hugo \
             --minify \
             --baseURL "https://masaiqi.com/"
-
-  # Deployment job
-  deploy:
-    environment:
-      name: AliyunOSS
-      url: https://masaiqi.com
-    runs-on: ubuntu-latest 
-    needs: build
-    steps:
-          - name: upload files to OSS
-            uses: fangbinwei/aliyun-oss-website-action@v1
-            with:
-              accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
-              accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
-              bucket: masaiqi-blog
-              # use your own endpoint
-              endpoint: oss-cn-hangzhou.aliyuncs.com
-              folder: ./public
+      - name: upload files to OSS
+        uses: fangbinwei/aliyun-oss-website-action@v1
+        with:
+            accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+            accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+            bucket: masaiqi-blog
+            # use your own endpoint
+            endpoint: oss-cn-hangzhou.aliyuncs.com
+            folder: ./public
+          
