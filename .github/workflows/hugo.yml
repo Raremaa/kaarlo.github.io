@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  # Setting an environment variable with the value of a configuration variable
+  beian_info: ${{ vars.BEIAN_INFO }}
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -49,7 +53,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Before Building
-        run: sed -i 's/${{ vars.BEIAN_INFO }}/Kaarlo/g' config.toml
+        run: sed -i 's/$beian_info/Kaarlo/g' config.toml
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
