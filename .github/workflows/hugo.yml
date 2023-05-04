@@ -54,7 +54,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Before Building
-        run: sed -i 's/v${BEIAN_INFO}/Kaarlo/g' config.toml
+        run: sed -i 's/beian/v${BEIAN_INFO}/g' config.toml
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
