@@ -37,7 +37,7 @@ showTableOfContents: true
 1. [Kafka基础](/posts/Kafka基础/)
 
 ### 极客时间《Spring 核心编程思想》
-1. [Spring-Bean的生命周期一图流+详细说明](/posts/Spring-Bean的生命周期一图流+详细说明/)
+1. [Spring-Bean的生命周期一图流与详细说明](/posts/Spring-Bean的生命周期一图流与详细说明/)
 2. [Spring应用上下文生命周期](/posts/Spring应用上下文生命周期/)
 
 ### 极客时间《MySQL实战45讲》
