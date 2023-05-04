@@ -67,8 +67,8 @@ jobs:
         with:
             accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
             accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
-            bucket: masaiqi-blog
+            bucket: ${{ secrets.BUCKET_NAME }}
             # use your own endpoint
-            endpoint: oss-cn-hangzhou.aliyuncs.com
+            endpoint: ${{ secrets.ENDPOINT }}
             folder: ./public
           
