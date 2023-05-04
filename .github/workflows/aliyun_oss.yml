@@ -58,11 +58,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://masaiqi.com"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./public
+            --baseURL "https://masaiqi.com/"
 
   # Deployment job
   deploy:
@@ -80,4 +76,4 @@ jobs:
               bucket: masaiqi-blog
               # use your own endpoint
               endpoint: oss-cn-hangzhou.aliyuncs.com
-              folder: ./
+              folder: ./public
