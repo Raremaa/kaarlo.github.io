@@ -52,7 +52,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Before Building
-        run: sed -i 's/beian/浙ICP备19034392号-1/g' config.toml
+        run: sed -i 's/beian/${{ vars.BEIAN_INFO }}/g' config.toml
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
