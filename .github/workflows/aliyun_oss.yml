@@ -60,7 +60,6 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --minify \
             --baseURL "https://masaiqi.com/"
       - name: upload files to OSS
         uses: fangbinwei/aliyun-oss-website-action@v1
