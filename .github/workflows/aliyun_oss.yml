@@ -79,5 +79,5 @@ jobs:
               accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
               bucket: masaiqi-blog
               # use your own endpoint
-              endpoint: oss-cn-shanghai.aliyuncs.com
+              endpoint: oss-cn-hangzhou.aliyuncs.com
               folder: ./
