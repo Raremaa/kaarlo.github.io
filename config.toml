@@ -70,7 +70,10 @@ avatarSize = "size-m"
 owner = "马赛琦"
 metaKeywords = ["masaiqi", "Kaarlo", "马赛琦", "blog", "Java", "Engineer"]
 description = "认识你自己 凡事勿过度"
-footer = "beian"
+footer = "Kaarlo"
+customFooterHTML = '''
+beian
+  '''
 socialIcons = [
     { name = "github", url = "https://github.com/Raremaa" },
     { name = "email", url = "mailto:masaiqi.com@gmail.com" }
