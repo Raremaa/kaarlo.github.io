@@ -1,5 +1,5 @@
 ---
-title: "Summary"
+title: "Archives"
 type: page
 showTableOfContents: true
 ---
