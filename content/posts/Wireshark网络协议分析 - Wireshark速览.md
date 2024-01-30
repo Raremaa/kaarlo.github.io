@@ -11,7 +11,7 @@ tags: ["wireShark","网络协议"]
 
 [`Wireshark`](https://www.wireshark.org/)是一个开源的网络数据包分析器，本文基于`Windows11`平台，`Wireshark`使用的是4.2.0版本，有官方的中文支持。
 
-![Untitled](https://masaiqi.oss-cn-hangzhou.aliyuncs.com/Untitled.png)
+![Untitled](https://img.masaiqi.com/202401301816129.png)
 
 # 2. 快速上手
 
@@ -19,7 +19,7 @@ tags: ["wireShark","网络协议"]
 
 打开`Wireshark`第一步需要选择一个网络接口：
 
-![Untitled](https://masaiqi.oss-cn-hangzhou.aliyuncs.com/Untitled%201.png)
+![Untitled](https://img.masaiqi.com/202401301816984.png)
 
 这里可以根据实际情况选择一个接口，笔者这里是WLAN上网的环境，重点看一下两个接口：
 
@@ -50,7 +50,7 @@ ping masaiqi.com
 
 在WireShark中我们有以下结果：
 
-![Untitled](https://masaiqi.oss-cn-hangzhou.aliyuncs.com/Untitled%202.png)
+![Untitled](https://img.masaiqi.com/202401301816147.png)
 
 ## 2.3. 设置合适的过滤表达式
 
@@ -70,7 +70,7 @@ dns or ((_ws.col.protocol == "ICMP") )
 
 这部分是Wireshark的核心部分，以序号1167这行数据为例，点击后WireShark显示如下：
 
-![Untitled](https://masaiqi.oss-cn-hangzhou.aliyuncs.com/Untitled%203.png)
+![Untitled](https://img.masaiqi.com/202401301816099.png)
 
 主要分为两部分：
 
@@ -79,7 +79,7 @@ dns or ((_ws.col.protocol == "ICMP") )
 
 点开“Domain Name System”：
 
-![Untitled](https://masaiqi.oss-cn-hangzhou.aliyuncs.com/Untitled%204.png)
+![Untitled](https://img.masaiqi.com/202401301816806.png)
 
 ***根据笔者的观察，这里分为两种字段：***
 
@@ -92,13 +92,13 @@ dns or ((_ws.col.protocol == "ICMP") )
 
 封包详情中这部分数据刚好对应TCP/IP四层模型中的模型层次（原谅笔者草率的图）
 
-![Untitled](https://masaiqi.oss-cn-hangzhou.aliyuncs.com/Untitled%205.png)
+![Untitled](https://img.masaiqi.com/202401301816354.png)
 
 `TCP/IP 四层模型`，是分析`Wireshark`数据帧（数据包）的基础知识。
 
 关于网络的框架模型普遍存在两套理解，即OSI七层模型与TCP/IP四层模型，本质上只是考虑问题的维度不一样，二者的关系如下：
 
-![Untitled](https://masaiqi.oss-cn-hangzhou.aliyuncs.com/Untitled%206.png)
+![Untitled](https://img.masaiqi.com/202401301816058.png)
 
 对于TCP/IP四层模型来说：
 

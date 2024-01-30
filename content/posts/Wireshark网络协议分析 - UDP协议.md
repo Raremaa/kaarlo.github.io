@@ -11,7 +11,7 @@ tags: ["wireShark","网络协议"]
 
 `UDP`包的数据结构：
 
-![Untitled](https://img.masaiqi.com/Untitled.png)
+![Untitled](https://img.masaiqi.com/202401301820404.png)
 
 # 2. 实战
 
@@ -134,7 +134,7 @@ func main() {
 
 编译执行，控制台输出如下：
 
-![Untitled](https://img.masaiqi.com/Untitled%201.png)
+![Untitled](https://img.masaiqi.com/202401301821680.png)
 
 ### 2.2. Wireshark抓包分析
 
@@ -144,13 +144,13 @@ func main() {
 udp.port==9829
 ```
 
-![Untitled](https://img.masaiqi.com/Untitled%202.png)
+![Untitled](https://img.masaiqi.com/202401301821270.png)
 
 可以看到，`UDP`协议的过程是比较简单的，无需`TCP`一样的“三次握手”操作，仅需直接对着监听端口发送数据，接收方接受数据即可。
 
 在`Wireshark`的`Transport`分析中，我们可以看到上述的UDP包头信息：
 
-![Untitled](https://img.masaiqi.com/Untitled%203.png)
+![Untitled](https://img.masaiqi.com/202401301820391.png)
 
 其中包括了源和目标端口地址，长度，校验和和数据payload信息。
 
